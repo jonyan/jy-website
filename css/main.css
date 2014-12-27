@@ -1,0 +1,151 @@
+body {
+	font-family: 'proxima_novalight';
+	font-size: 19px;
+	line-height: 29px;
+	color: #4D4D4D;
+}
+
+p {
+	width: 621px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* Header: Logo + Nav Bar */
+
+
+#header {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	margin-left: 4%; /* margin-edit */
+	margin-right: 4%; /* margin-edit */
+}
+
+#jy-logo-subtext {
+}
+
+#jy-logo {
+	width: 130px;
+	height: auto;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+#jy-logo-subtext {
+  font-family: 'proxima_novalight';
+  font-size: 13px;
+  letter-spacing: 1.6px;
+  color: #414141;
+  text-align: center;
+}
+
+#nav-bar {
+	margin-top: 90px; 
+}
+
+.nav-empty-col {
+	width: 15%;
+}
+
+.nav-link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #414141;
+	font-size: 18px;
+	font-family: 'proxima_nova_extrabold';
+	letter-spacing: 5px;
+}
+
+.nav-link:hover {
+	opacity: .3;
+}
+
+/* Body */
+
+
+#body {
+	margin-left: 4%; /* margin-edit */
+	margin-right: 4%; /* margin-edit */
+
+}
+
+.tile-img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+.tile-container {
+	display: -webkit-flex;
+	display: flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.tile-col {
+	width: 32.33%;
+	margin: .5%;
+}
+
+.tile-img:hover {
+	opacity: .5;
+}
+
+
+
+/* Medium screens */
+@media all and (min-width : 771px) and (max-width: 1010px) and (min-device-width : 1440px) {
+  .tile-container {
+  	display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+     -webkit-justify-content: flex-start;
+ 		justify-content: flex-start;
+
+  }
+  .tile-col {
+  	-webkit-flex: 45%;
+  	margin: 5px;
+	}
+
+}
+
+/* Small screens */
+@media all and (max-width: 770px) {
+  .tile-container {
+	  flex-direction: column;
+	  margin-bottom: 0px;
+
+  }
+  .tile-col {
+  	width: 100%;
+  	max-width: 430px;
+  	margin-bottom: 20px;
+  }
+
+}
+
+@media all and (max-device-width : 375px) { 
+	.tile-container {
+	  flex-direction: column;
+	  margin-bottom: 0px;
+
+  }
+  .tile-col {
+  	width: 100%;
+  	margin-bottom: 20px;
+  }
+
+}
