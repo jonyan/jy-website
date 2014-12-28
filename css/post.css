@@ -14,6 +14,10 @@
 	padding-bottom: 60px;
 }
 
+.semi-bold {
+	font-family: 'proxima_nova_semibold'
+}
+
 .title {
 	font-size: 40px;
 	font-family: 'proxima_nova_bold';
