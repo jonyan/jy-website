@@ -1,0 +1,274 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Jonathan Yan</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/post.css">
+	<link rel="stylesheet" href="css/photography.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'fade',
+				closeEffect : 'fade',
+
+				prevEffect : 'fade',
+				nextEffect : 'fade',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'fade',
+				nextEffect : 'fade',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+		});
+	</script>
+
+	<!-- Gridify JS -->
+	<script type="text/javascript" src="js/gridify.js"></script>
+  <script type="text/javascript">
+      $(window).load(function() {
+          var options =
+          {
+              srcNode: 'img',             // grid items (class, node)
+              margin: '8px',             // margin in pixel, default: 0px
+              width: '300px',             // grid item width in pixel, default: 220px
+              max_width: '',              // dynamic gird item width if specified, (pixel)
+              resizable: true,            // re-layout if window resize
+              transition: 'all 0.5s ease' // support transition for CSS3, default: all 0.5s ease
+          }
+          $('.grid').gridify(options);
+      });
+  </script>
+
+ //  <script>
+ //  	$(window).load(function() {
+ //  		var height = ($(document).height())/2.4;
+ //  		console.log("height: " + height);
+ //  		$("#clear-footer").css({"height":height});
+ //  		console.log("window loaded");
+ //  	});
+
+ //  	$(window).resize(function() {
+ //  		var height = $("#last-photo").position().top + 500;
+ //  		console.log("height: " + height);
+ //  		$("#clear-footer").css({"height":height});
+ //  		// height = 0;
+ //  	});
+	// </script>
+
+
+
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+	  <div id='header'>
+	  	<div id="jy-logo-subtext">
+		  	<img id="jy-logo" src="images/jy-monogram.png">
+		  	<span id="jy-logo-subtext">DESIGNER | DEVELOPER | PRODUCT-LOVER</span>
+	  	</div>
+
+	  	<div id="nav-bar">
+				<center>
+					<table id="nav-table">
+						<tr>
+							<td class="nav-item">
+								<a class="nav-link" href="home.html">WORK</a>
+							</td>
+							<td class='nav-empty-col'></td>
+							<td class='nav-item'>
+								<a class='nav-link' href="blog.html">BLOG</a>
+							</td>
+							<td class='nav-empty-col'></td>
+							<td class='nav-item'>
+								<a class="nav-link" href="about.html">ABOUT</a>
+							</td>
+							<td class='nav-empty-col'></td>
+							<td class='nav-item'>
+								<a class='nav-link' href="photography.html">PHOTOGRAPHY</a>
+							</td>
+						</tr>
+					</table>
+				</center>
+	  	</div>
+	  </div>
+
+	<!-- ##########    BODY     ########## -->
+
+	  <div id='body'>
+	  	<center>
+	  		<div class="post-header">
+		  		<div class="title">Summer in Portugal</div>
+		  		<br>
+		  		<span class="date">September 2014</span>
+	  		</div>
+
+	  		<div class="text-container-below-header">
+	        <p class="text">
+	          A series of photos from my summer trip through Portugal.  View the <a class="post-link" href="https://www.flickr.com/photos/107662214@N02/sets/72157649605918729/">full album on Flickr</a>.
+	        </p>
+	      </div>
+
+	  		<div class="grid">
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(1-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(1-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(2-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(2-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(3-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(3-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(4-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(4-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(5-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(5-of-32).png" alt="" /></a>
+					
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(6-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(6-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(7-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(7-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(8-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(8-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(9-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(9-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(10-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(10-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(11-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(11-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(12-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(12-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(13-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(13-of-32).png" alt="" /></a>
+				
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(14-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(14-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(15-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(15-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(16-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(16-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(17-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(17-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(18-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(18-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(19-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(19-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(20-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(20-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(21-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(21-of-32).png" alt="" /></a>
+
+					<a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(22-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(22-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(23-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(23-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(24-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(24-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(25-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(25-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(26-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(26-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(27-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(27-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(28-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(28-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(29-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(29-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(30-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(30-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(31-of-32).png"><img class="photography-grid-item" src="images/portugal-thumbnails/portugal-(31-of-32).png" alt="" /></a>
+
+					<a class="fancybox-buttons" data-fancybox-group="thumb" href="images/portugal-photos/portugal-(32-of-32).png"><img id="last-photo" class="photography-grid-item" src="images/portugal-thumbnails/portugal-(32-of-32).png" alt="" /></a>
+
+				</div>
+
+	  	</center>
+	  </div>
+
+	  <div id="portugal-clear-footer"></div>
+
+	  <footer>
+	  	<div id="footer-header">
+	  		<center>
+	  		<span>Connect with me on social media.</span>
+	  		</center>
+	  	</div>
+	  	<div id="social-icons">
+	  		<center>
+		  	<a href="http://instagram.com/jonjyan" target="_blank"><img class="social-icon" src="images/instagram-icon.png"></a>
+		  	<a href="https://twitter.com/jonjyan" target="_blank"><img class="social-icon" src="images/twitter-icon.png"></a>
+		  	<a href="https://www.linkedin.com/in/jonjyan" target="_blank"><img class="social-icon" src="images/linkedin-icon.png"></a>
+		  	<a href="https://www.flickr.com/photos/107662214@N02/" target="_blank"><img class="social-icon" src="images/flickr-icon.png"></a>
+		  	</center>
+	  	</div>
+
+	  	<div id="footer-footer">
+	  		<!-- <center> -->
+	  		<span>Copyright &copy; 2015 Jonathan Yan</span>
+	  		<!-- </center> -->
+	  	</div>
+	  </footer>
+	</div><!-- #wrapper -->
+
+</body>
+</html>

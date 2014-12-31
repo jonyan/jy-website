@@ -1,0 +1,78 @@
+
+
+body {
+	margin:0;
+}
+
+
+
+.photography-grid-item:hover {
+   opacity:0.5;
+
+  }
+/*
+@media all and (max-width: 710px) {
+  body {
+  	background-color: red;
+  }
+  .photography-grid-item {
+  	text-align:center;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+
+}*/
+
+#portugal-clear-footer {
+  width: 100%;
+}
+
+#artstudi-171-clear-footer {
+  width: 100%;
+}
+
+@media all and (min-width: 1341px) {
+
+  #portugal-clear-footer {
+    height: 2300px;
+  }
+  #artstudi-171-clear-footer {
+    height: 2400px;
+  }
+}
+
+@media all and (min-width: 1069px) and (max-width: 1340px) {
+
+  #portugal-clear-footer {
+    height: 3000px;
+  }
+  #artstudi-171-clear-footer {
+    height: 3200px;
+  }
+  
+}
+
+@media all and (min-width : 713px) and (max-width: 1068px) and (min-device-width : 1440px) {
+
+  #portugal-clear-footer {
+    height: 4100px
+  }
+  #artstudi-171-clear-footer {
+    height: 4600px;
+  }
+}
+@media all and (max-width: 712px) {
+
+  #portugal-clear-footer {
+    height: 9100px
+  }
+
+  #artstudi-171-clear-footer {
+    height: 9800px;
+  }
+
+}
+
+
+
+    
