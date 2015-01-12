@@ -13,10 +13,39 @@
 	<link rel="stylesheet" href="css/post.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script>
+  $(document).ready(function(){
+
+    // hide #back-top first
+    $("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+
+      // scroll body to 0px on click
+      $('#back-top a').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+
+  });
+  </script>
 
 
 </head>
@@ -104,9 +133,9 @@
     		<div class="text-container">
     			<span class="text-title">Needfinding</span>
     			<p class="text">
-    				After a week spent observing and interviewing, one of the most common tasks we found people doing was setting simple individual and group reminders for deadlines, club meeting times etc.  As students, our schedules are constantly being poked, pulled and rearranged to fit all the meetings, deadlines and commitments that fill our lives.  In theory, technology posits itself to be a great tool to organize and solve the hassles of scheduling and reminders.  However, meetings are still missed, deadlines still pushed, and commitments still neglected. 
+    				After a week spent observing and interviewing, one of the most common tasks we found people doing was setting simple individual and group reminders for deadlines, club meeting times etc.  As students, our schedules are constantly being poked and pulled to fit all the meetings, and deadlines that fill our lives.  In theory, technology posits itself to be a great tool to organize and solve the hassles of scheduling and reminders.  However, meetings are still missed and deadlines still pushed.
     				<br><br>
-    				Digging deeper into why this was happening, we found that the majority of our interviewees used a calendar application to schedule their day; however they complained that the existing technologies are plagued by platform differences (referring to sending reminders/events to groups of people on different platforms) and for many simple tasks like reminders, are overkill.  Further, many viewed calendars as an application for events, not simple reminders that should perform their task when needed and disappear after.  Instead of crowding their already crowded calendars and going through the many steps of creating an event (opening the application, selecting the correct calendar, creating a new event, typing a title for the event, setting a start time and end time, inviting friends to the event etc) in a calendar application just to set a simple reminder, many students opted to just trust their memory; unsurprisingly, most of our interviewees admitted to forgetting to remind themselves or their friends.
+    				Digging deeper into why this was happening, we found that the majority of our interviewees used a calendar application to schedule their day; however they complained that the existing technologies are plagued by platform differences and for many simple tasks like reminders, are overkill.  Further, many viewed calendars as an application for events, not simple reminders that should perform their task when needed and disappear after.  Instead of crowding their already crowded calendars and going through the many steps of creating an event in a calendar application just to set a simple reminder, many students opted to just trust their memory; unsurprisingly, most of our interviewees admitted to forgetting to remind themselves or their friends.
     			</p>
     		</div>
 
@@ -150,6 +179,12 @@
     		<img class="post-img"src="images/remindly-hand-mockup.png">
 
     	</center>
+    </div>
+
+    <div id="back-top">
+      <a href="#top"><span></span>
+        <img id="up-arrow" src="images/up-arrow.png">
+      </a>
     </div>
 
     <div id="clear-footer"></div>

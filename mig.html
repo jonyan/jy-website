@@ -13,10 +13,37 @@
 	<link rel="stylesheet" href="css/post.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script>
+  $(document).ready(function(){
+    // hide #back-top first
+    $("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+
+      // scroll body to 0px on click
+      $('#back-top a').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+  });
+  </script>
 
 
 </head>
@@ -100,7 +127,7 @@
           </p>
         </div>
 
-      <a class="image-link" href="images/mig-website.png"><img class="post-img"src="images/mig-homepage.png"></a>
+      <a class="image-link" href="images/mig-website.png" target="_blank"><img class="post-img"src="images/mig-homepage.png"></a>
 
       <div class="text-container">
           <span class="text-title">Logo</span>
@@ -111,12 +138,11 @@
           </p>
         </div>
 
-        <img class="post-img-small"src="images/mig-logo-1.png">
-        <br>
-        <img class="post-img-small"src="images/mig-logo-2.png">
-        <br>
-        <img class="post-img-small"src="images/mig-logo-3.png">
-        <br>
+        
+        <img class="inline-img-small"src="images/mig-logo-1.png">
+        <img class="inline-img-small"src="images/mig-logo-2.png">
+        <img class="inline-img-small"src="images/mig-logo-3.png">
+        <br><br><br>
         <hr class="line-break">
         <div class="text-container">
           <p class="text">
@@ -127,6 +153,12 @@
         <img class="post-img"src="images/mig-macbook-air-mockup.png">
 
       </center>
+    </div>
+
+    <div id="back-top">
+      <a href="#top"><span></span>
+        <img id="up-arrow" src="images/up-arrow.png">
+      </a>
     </div>
 
     <div id="clear-footer"></div>

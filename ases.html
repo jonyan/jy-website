@@ -13,10 +13,39 @@
 	<link rel="stylesheet" href="css/post.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script>
+  $(document).ready(function(){
+
+    // hide #back-top first
+    $("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+
+      // scroll body to 0px on click
+      $('#back-top a').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+
+  });
+  </script>
 
 </head>
 
@@ -174,6 +203,12 @@
 
         <img class="post-img"src="images/ases-group-photo.png">
 
+    </div>
+
+    <div id="back-top">
+      <a href="#top"><span></span>
+        <img id="up-arrow" src="images/up-arrow.png">
+      </a>
     </div>
 
     <div id="clear-footer"></div>

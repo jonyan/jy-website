@@ -13,10 +13,44 @@
 	<link rel="stylesheet" href="css/post.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+
+
+  <script>
+  $(document).ready(function(){
+
+    // hide #back-top first
+    $("#back-top").hide();
+    
+    // fade in #back-top
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('#back-top').fadeIn();
+        } else {
+          $('#back-top').fadeOut();
+        }
+      });
+
+      // scroll body to 0px on click
+      $('#back-top a').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    });
+
+  });
+  </script>
+
+
 
 
 </head>
@@ -83,15 +117,6 @@
     		</div>
 
     		<div class="text-container">
-    			<span class="text-title">Background</span>
-    			<p class="text">
-    				At startup weekend, teams are formed on the first day of the event; anyone with an idea can pitch. Ideas are voted on and teams are formed around the most popular ones.  I joined what would later be called Willow Goes Chic.  We wanted to solve the buying a wedding dress experience.  Molly, a newly wed, and the member with the original idea, began her pitch by posing a question: “How many of you know what its like to buy a wedding dress?”  Unsurprisingly not a single hand was raised – the majority of the crowd was male, quite representative of the silicon valley and even the startup community more broadly.  This was a space that had been overlooked by technology and the startup community and was clearly in desperate need of it.
-    				<br><br>	
-  					Our team was composed of 4 Stanford MBA’s and 2 Undergraduate Stanford Hackers.
-    			</p>
-    		</div>
-
-    		<div class="text-container">
           <span class="text-title">Tools</span>
           <p class="text">
             Sketch<br>
@@ -122,13 +147,9 @@
     		<div class="text-container">
     			<span class="text-title">Brainstorming</span>
     			<p class="text">
-    				We took inspiration from businesses like Warby Parker.  Just like how no one imagined fashionable, high quality eye wear could be sold online, we wanted to prove that consumers could buy boutique quality wedding dresses without the boutique markup online.
+    				We took inspiration from businesses like Warby Parker.  Just like how no one imagined fashionable, high quality eye wear could be sold online, we wanted to prove that consumers could buy boutique quality wedding dresses without the boutique markup, online.
     				<br><br>
-  					The product of wedding dresses however presented several challenges.  We recognized that for some, the experience of having your special moment and going into a store to buy a dress with one’s friends and family surrounding you is the most important part of the experience. Further, since you only wear it once, the fit must be perfect.
-  					<br><br>
-  					Through our brainstorm we attempted to address some of these challenges.  We imagined including small perks like a bottle of champagne to accompany the wedding dress to replicate a part of the in-store experience.  Willow Goes Chic would have certified seamstresses that customers could search for online by location.  We also envisioned a portal where customers could choose to customize their dresses.
-  					<br><br>
-  					We accepted that there would be some percent of the market who would valued the in store experience over all else and would never be customers of Willow Goes Chic.  However, we believed that providing a service where women could select high quality couture at affordable prices and receive their dresses within weeks or months and not a year from the comfort of their home would provide significant value.
+  					Through our brainstorm, we came up with several features that we felt addressed potential misgivings about purchasing a wedding dress online.  Although consumers would be purchasing their dresses through the Internet, we wanted the experience to still be a special one.  We imagined including perks like a bottle of champage to accompany the wedding dress, or having a Willow Goes Chic certified seamstress be present during the try-on.  We also envisioned a portal where customers could choose to customize their dress and truly make it their own.
     			</p>
     		</div>
 
@@ -158,7 +179,7 @@
 
     		<div class="text-container">
     			<p class="text">
-    				Viewing a dress allows you to see that dress&#8217; story and learn more about her personality.
+    				Viewing a dress allows you to see that dress&#8217; story and learn more about her personality.  Each dress has her own full page, below is Clementine.
     			</p>
     		</div>
 
@@ -194,6 +215,12 @@
         <img class="post-img"src="images/willow-ipad-mockup.png">
 
       </center>
+    </div>
+
+    <div id="back-top">
+      <a href="#top"><span></span>
+        <img id="up-arrow" src="images/up-arrow.png">
+      </a>
     </div>
 
     <div id="clear-footer"></div>

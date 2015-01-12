@@ -1,3 +1,23 @@
+#up-arrow {
+	width: 50px;
+	height: auto;
+}
+#back-top {
+	position: fixed;
+	bottom: 4%;
+	right: 1.5%;
+	z-index: 4000;	
+}
+
+#back-top a {
+	color: #4D4D4D;
+	text-decoration: none;
+}
+
+
+#back-top a:hover {
+	opacity: .4;
+}
 
 
 .post-link {
@@ -47,12 +67,18 @@ b {
 	padding-bottom: 60px;
 }
 
+.inline-img-small {
+	width: 33%;
+	min-width: 370px; 
+	display: inline;
+	height: auto;
+}
+
 .post-img-small {
 	max-width: 900px;
 	width: 100%;
 	width: auto\9; /* ie8 */
 	height: auto;
-	padding-bottom: 60px;
 }
 
 .post-img-alt {
@@ -76,11 +102,11 @@ b {
 }
 
 .image-link {
-	opacity: .5;
+	opacity: 1;
 }
 
 .image-link:hover {
-	opacity: 1;
+	opacity: .5;
 }
 
 .text-container {
